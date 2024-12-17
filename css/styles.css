@@ -38,3 +38,17 @@
     padding: 1rem;
     color: white;
    }
+   /* Hover Effects */
+.nav ul li {
+    transition: transform 0.3s ease;
+   }
+   .nav ul li:hover {
+    transform: translateX(10px);
+   }
+   .sidebar ul li {
+    transition: all 0.3s ease;
+   }
+   .sidebar ul li:hover {
+    transform: scale(1.05);
+    color: #2196F3;
+   }
