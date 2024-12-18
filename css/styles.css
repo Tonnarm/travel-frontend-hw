@@ -10,34 +10,41 @@
     min-height: 100vh;
     gap: 1rem;
     padding: 1rem;
-   }
-   .header {
-    grid-area: header;
-   background: #2196F3;
-   padding: 1rem;
-   color: white;
-   }
-   .nav {
-    grid-area: nav;
-    background: #64B5F6;
-    padding: 1rem;
-   }
-   .main {
-    grid-area: main;
-    background: #BBDEFB;
-    padding: 1rem;
-   }
-   .sidebar {
-    grid-area: sidebar;
-    background: #64B5F6;
-    padding: 1rem;
-   }
-   .footer {
-    grid-area: footer;
-    background: #2196F3;
-    padding: 1rem;
-    color: white;
-   }
+}
+    .header {
+        grid-area: header;
+        background: #A8E6CF;
+        padding: 1rem;
+        color: #333; 
+    }
+    
+    .nav {
+        grid-area: nav;
+        background: #D3F8E2; 
+        padding: 1rem;
+        color: #333;
+    }
+    
+    .main {
+        grid-area: main;
+        background: #B9FBC0;
+        padding: 1rem;
+        color: #333;
+    }
+    
+    .sidebar {
+        grid-area: sidebar;
+        background: #C4FCEF; 
+        padding: 1rem;
+        color: #333;
+    }
+    
+    .footer {
+        grid-area: footer;
+        background: #99E2B4; 
+        padding: 1rem;
+        color: #333;
+    }
    /* Hover Effects */
 .nav ul li {
     transition: transform 0.3s ease;
