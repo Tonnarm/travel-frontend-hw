@@ -89,3 +89,27 @@
    .sidebar {
     animation: slideIn 1s ease-out;
    }
+   /* สําหรับแท็บเล็ต */
+@media (max-width: 768px) {
+    .grid-container {
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main sidebar"
+    "footer footer";
+    grid-template-columns: 1fr 200px;
+    }
+   }
+   /* สํ
+   าหรับมือถือ */
+   @media (max-width: 480px) {
+    .grid-container {
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "sidebar"
+    "footer";
+    grid-template-columns: 1fr;
+    }
+   }
