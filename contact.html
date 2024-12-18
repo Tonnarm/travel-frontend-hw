@@ -34,12 +34,16 @@
             <form action="/submit" method="POST">
                 <div class="form-group">
                     <label for="fullname">ชื่อ-นามสกุล *</label>
-                    <input 
+                    <input
                     type="text"
                     id="fullname"
-                    name="fullname" required
+                    name="fullname"
+                    required
+                    aria-required="true"
                     minlength="2"
-                    maxlength="100">
+                    maxlength="100"
+                    aria-describedby="fullname-help">
+                    <small id="fullname-help">กรุณากรอกชื่อและนามสกุลจริง</small>
                 </div>
                 <div class="form-group">
                     <label for="email">อีเมล *</label>
@@ -48,7 +52,10 @@
                     id="email"
                     name="email"
                     required
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    aria-required="true"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    aria-describedby="email-help">
+                    <small id="email-help">ตัวอย่าง: example@domain.com</small>
                     </div>
                 <div class="form-group">
                     <label for="tel">เบอร์โทรศัพท์</label>
@@ -56,7 +63,9 @@
                     type="tel"
                     id="tel"
                     name="tel"
-                    pattern="[0-9]{10}">
+                    pattern="[0-9]{10}"
+                    aria-describedby="tel-help">
+                    <small id="tel-help">กรอกหมายเลข 10 หลัก ไม่ต้องมีขีด เช่น 0812345678</small>
                     </div>
                 <div class="form-group">
                     <label for="message">ข้อความ *</label>
@@ -64,8 +73,11 @@
                     id="message"
                     name="message"
                     required
+                    aria-required="true"
                     minlength="10"
-                    rows="5"></textarea>
+                    rows="5"
+                    aria-describedby="message-help"></textarea>
+                    <small id="message-help">กรุณากรอกข้อความอย่างน้อย 10 ตัวอักษร</small>
                     </div>
                 <button type="submit">ส่งข้อความ</button>
                 </form>
