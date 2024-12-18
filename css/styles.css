@@ -11,112 +11,128 @@
     gap: 1rem;
     padding: 1rem;
 }
-    .header {
-        grid-area: header;
-        background: #A8E6CF;
-        padding: 1rem;
-        color: #333; 
-    }
-    
-    .nav {
-        grid-area: nav;
-        background: #D3F8E2; 
-        padding: 1rem;
-        color: #333;
-    }
-    
-    .main {
-        grid-area: main;
-        background: #B9FBC0;
-        padding: 1rem;
-        color: #333;
-    }
-    
-    .sidebar {
-        grid-area: sidebar;
-        background: #C4FCEF; 
-        padding: 1rem;
-        color: #333;
-    }
-    
-    .footer {
-        grid-area: footer;
-        background: #99E2B4; 
-        padding: 1rem;
-        color: #333;
-    }
-   /* Hover Effects */
+
+.header {
+    grid-area: header;
+    background: #A8E6CF;
+    padding: 1rem;
+    color: #333;
+    animation: slideIn 1s ease-out;
+}
+
+.nav {
+    grid-area: nav;
+    background: #D3F8E2;
+    padding: 1rem;
+    color: #333;
+}
+
+.main {
+    grid-area: main;
+    background: #B9FBC0;
+    padding: 1rem;
+    color: #333;
+    animation: fadeIn 1s ease-out;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #C4FCEF;
+    padding: 1rem;
+    color: #333;
+    animation: slideIn 1s ease-out;
+}
+
+.footer {
+    grid-area: footer;
+    background: #99E2B4;
+    padding: 1rem;
+    color: #333;
+}
+
+/* Hover Effects */
 .nav ul li {
     transition: transform 0.3s ease;
-   }
-   .nav ul li:hover {
+}
+
+.nav ul li:hover {
     transform: translateX(10px);
-   }
-   .sidebar ul li {
+}
+
+.sidebar ul li {
     transition: all 0.3s ease;
-   }
-   .sidebar ul li:hover {
+}
+
+.sidebar ul li:hover {
     transform: scale(1.05);
     color: #2196F3;
-   }
-   /* Animations */
+}
+
+/* Animations */
 @keyframes slideIn {
     from {
-    transform: translateX(-100%);
-    opacity: 0;
+        transform: translateX(-100%);
+        opacity: 0;
     }
     to {
-    transform: translateX(0);
-    opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
-   }
-   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-   }
-   @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-   }
-   /* ใชงาน ้ animations */
-   .header {
-    animation: slideIn 1s ease-out;
-   }
-   .nav ul li {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-out forwards;
-   }
-   .nav ul li:nth-child(1) { animation-delay: 0.1s; }
-   .nav ul li:nth-child(2) { animation-delay: 0.2s; }
-   .nav ul li:nth-child(3) { animation-delay: 0.3s; }
-   .nav ul li:nth-child(4) { animation-delay: 0.4s; }
-   .main {
-    animation: fadeIn 1s ease-out;
-   }
-   .sidebar {
-    animation: slideIn 1s ease-out;
-   }
-   /* สําหรับแท็บเล็ต */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Improved Responsiveness */
+
+/* For Tablets (max-width: 768px) */
 @media (max-width: 768px) {
     .grid-container {
-    grid-template-areas:
-    "header header"
-    "nav nav"
-    "main sidebar"
-    "footer footer";
-    grid-template-columns: 1fr 200px;
+        grid-template-areas:
+        "header header"
+        "nav main"
+        "sidebar footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto auto;
     }
-   }
-   /* สํ
-   าหรับมือถือ */
-   @media (max-width: 480px) {
+    .nav,
+    .sidebar {
+        padding: 0.8rem;
+    }
+    .main {
+        padding: 0.8rem;
+    }
+}
+
+/* For Mobile (max-width: 480px) */
+@media (max-width: 480px) {
     .grid-container {
-    grid-template-areas:
-    "header"
-    "nav"
-    "main"
-    "sidebar"
-    "footer";
-    grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "sidebar"
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr auto;
     }
-   }
+    .header,
+    .nav,
+    .main,
+    .sidebar,
+    .footer {
+        padding: 0.5rem;
+    }
+    .header h1 {
+        font-size: 1.5rem; 
+    .nav ul li {
+        font-size: 0.9rem;
+    }
+}
+}
