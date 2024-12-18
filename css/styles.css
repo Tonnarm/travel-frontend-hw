@@ -13,9 +13,9 @@
    }
    .header {
     grid-area: header;
-    background: #2196F3;
-    padding: 1rem;
-    color: white;
+   background: #2196F3;
+   padding: 1rem;
+   color: white;
    }
    .nav {
     grid-area: nav;
